@@ -28,22 +28,11 @@ public class Main {
     System.out.println("Минимальное количество - [" + Collections.min(map.values()) + "]");
     System.out.println();
 
-    System.out.println("max_VALUE & min_VALUE");
 
     int maxValue = -1;
     for (int value : map.values()) {
       if (value > maxValue) {
         maxValue = value;
-
-      }
-    }
-    System.out.println("Максимальное количество -- " + maxValue);
-
-    int minValue = Integer.MAX_VALUE;
-    for (int value : map.values()) {
-      if (value < minValue) {
-        minValue = value;
-        System.out.println("Минимальное количество -- " + " " + minValue);
       }
     }
   }
