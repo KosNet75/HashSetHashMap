@@ -10,6 +10,7 @@ public class Main {
       + "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
       + "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
+
   public static void main(String[] args) {
     int volume;
     Map<Character, Integer> map = new HashMap<>();
@@ -20,9 +21,9 @@ public class Main {
         map.put(text.charAt(i), volume + 1);
       } else
         map.putIfAbsent(text.charAt(i), 1);
-      System.out.println(map);
     }
 
+    System.out.println(map);
     System.out.println("\nCollections.max & min");
     System.out.println("Максимальное количество - [" + Collections.max(map.values()) + "]");
     System.out.println("Минимальное количество - [" + Collections.min(map.values()) + "]");
