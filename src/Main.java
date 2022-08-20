@@ -18,11 +18,11 @@ public class Main {
       if (map.get(text.charAt(i)) != null) {
         volume = map.get(text.charAt(i));
         map.put(text.charAt(i), volume + 1);
-      } else if (map.get(text.charAt(i)) == null) {
-        map.put(text.charAt(i), 1);
-      }
+      } else
+        map.putIfAbsent(text.charAt(i), 1);
       System.out.println(map);
     }
+
     System.out.println("\nCollections.max & min");
     System.out.println("Максимальное количество - [" + Collections.max(map.values()) + "]");
     System.out.println("Минимальное количество - [" + Collections.min(map.values()) + "]");
